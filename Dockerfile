@@ -1,7 +1,5 @@
 FROM python:3.10
 
 WORKDIR /app
-COPY client.py .
-
-RUN pip install requests
-CMD ["python", "client.py"]
+COPY requirements.txt .
+RUN pip install -r requirements.txt
